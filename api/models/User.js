@@ -5,6 +5,8 @@
 * @docs        :: http://sailsjs.org/#!documentation/models
 */
 
+var bcrypt = require('bcrypt');
+
 module.exports = {
 
   attributes: {
@@ -17,6 +19,29 @@ module.exports = {
         type: 'string',
         minLength: 6,
         required: true
+    },
+    firstname: {
+    	type: 'string',
+    	required: true
+    },
+    lastname: {
+    	type: 'string',
+    	required: true
+    },
+    address: {
+    	type: 'string'
+    },
+    phone: {
+    	type: 'string'
+    },
+    university: {
+    	type: 'string'
+    },
+    faculty: {
+    	type: 'string'
+    },
+    major: {
+    	type: 'string'
     },
     toJSON: function() {
         var obj = this.toObject();

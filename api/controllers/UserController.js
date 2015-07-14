@@ -6,6 +6,18 @@
  */
 
 module.exports = {
-	
+
+  findById: function (req, res) {
+    var id = req.param('id');
+    User.findById(id, function (err, user) {
+    	if(err)
+            res.json({error:err});
+        if(user == '')
+            res.notFound();
+        else
+            res.json({userData:user});
+    });
+  }
+
 };
 
