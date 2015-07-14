@@ -1,3 +1,3 @@
 # GumiTest
+Interview Exam App for Gumi
 
-a [Sails](http://sailsjs.org) application
